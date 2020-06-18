@@ -3,8 +3,6 @@ var board = [];
 var backTrack = 0;
 $(document).ready(function () {
 
-  
-
   generateTable();
   $('#go').on('click', function () {
     fillBoard();
@@ -30,7 +28,7 @@ $(document).ready(function () {
   });
 });
 
-function solve(givenBoard) {
+function solve() {
   var row = -1;
   var col = -1;
   var isEmpty = true;
@@ -54,16 +52,16 @@ function solve(givenBoard) {
   if (isEmpty) {
     return true;
   }
-  var possibleChoices = possibleSet(givenBoard, row, col);
+  var possibleChoices = possibleSet(board, row, col);
   for (var i = 0; i < possibleChoices.length; i++) {
-    if (isValid(givenBoard, possibleChoices[i], [row, col])) {
-      givenBoard[row][col] = possibleChoices[i];
+    if (isValid(board, possibleChoices[i], [row, col])) {
+      board[row][col] = possibleChoices[i];
       var id = document.getElementById(row + "_" + col);
-      id.value=givenBoard[row][col];
-      if (solve(givenBoard)) {
+      id.value=board[row][col];
+      if (solve(board)) {
         return true;
       } else {
-        givenBoard[row][col] = 0;
+        board[row][col] = 0;
         id.innerText = 0;
       }
     }

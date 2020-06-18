@@ -67,7 +67,6 @@ input[type=number] {
     outline: none;
     text-transform: uppercase;
     transition: all 0.5s;
-
 }
 
 #sudokuTable tr:nth-child(3n) {
@@ -115,3 +114,20 @@ ul li{
 #solveText{
     display: none;
 }
+
+
+button{
+    transition: all 0.2s;;
+}
+button:focus {
+    outline: none; 
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+button:active{
+    transform: scale(0.94);
+}
+
