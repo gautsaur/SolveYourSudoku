@@ -7,4 +7,7 @@ If the puzzle is valid, then it will solve your puzzle. If you don't have one, y
 
 When you're ready, hit solve to solve your puzzle.
 
-A popular backtracking algorith is implemented to solve the puzzle.
+A popular backtracking algorithm is implemented to solve the puzzle.
+
+Check it out:
+https://gautsaur.github.io/SolveYourSudoku/
